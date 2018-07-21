@@ -7,16 +7,20 @@
         <h1><a href="">Anjiwon blog</a></h1>
     </div>
 
+    {% for post in posts %}
     <div>
-        <p>published: 21.07.2018, 13:51</p>
-        <h2><a href="">미림여자정보과학고등학교</a></h2>
-        <p>미림마이스터고등학교 뉴미디어소프트웨어과 뉴미디어웹솔루션과 뉴미디어 디자인과</p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
 
     <div>
         <p>published: 21.07.2018, 13:55</p>
         <h2><a href="">게임메이커</a></h2>
         <p>미림여자정보과학고등학교 전공동아리 게임메이커</p>
     </div>
+
+
     </body>
 </html>
